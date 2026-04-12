@@ -1,19 +1,18 @@
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Niv1 : MonoBehaviour
+public class Niv1bouton : MonoBehaviour
 {
-
-    //sons
     public AudioClip BChien;
     public AudioClip BChat;
 
     private AudioSource audioS;
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioS = GetComponent<AudioSource>();
+
     }
 
     public void PlayChien()
@@ -25,10 +24,4 @@ public class Niv1 : MonoBehaviour
     {
         audioS.PlayOneShot(BChat);
     }
-
-
-    //    public void onTriggerEnter2D(Collider2D collision)
-    //    {
-
-    //    }
 }
