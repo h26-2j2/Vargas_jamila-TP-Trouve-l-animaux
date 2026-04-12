@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: ee4a3f4f5583aa44c83c97ba19cff484
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
+  - erreurS: {fileID: 8300000, guid: 013005a285468ed469060b0237d60a65, type: 3}
+  - Mbravo: {fileID: 8300000, guid: 9063050a7dfbdb145b8a0bfa057be9d5, type: 3}
+  - chien: {fileID: 8300000, guid: 15835e7913311b2409015c29f7c7e322, type: 3}
+  - chat: {fileID: 8300000, guid: 846a535a1233ca647940b555f0fb0ed3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

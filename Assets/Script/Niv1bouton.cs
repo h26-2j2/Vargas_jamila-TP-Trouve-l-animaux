@@ -3,25 +3,28 @@ using UnityEngine.InputSystem;
 
 public class Niv1bouton : MonoBehaviour
 {
+    //sons
     public AudioClip BChien;
     public AudioClip BChat;
 
     private AudioSource audioS;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Récupérer le composant AudioSource
         audioS = GetComponent<AudioSource>();
 
     }
 
+    //function chien audio
     public void PlayChien()
     {
-        audioS.PlayOneShot(BChien);
+        audioS.PlayOneShot(BChien, 0.4f);
     }
 
+    //function chat audio
     public void PlayChat()
     {
-        audioS.PlayOneShot(BChat);
+        audioS.PlayOneShot(BChat, 0.9f);
     }
 }

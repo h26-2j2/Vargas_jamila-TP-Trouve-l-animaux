@@ -34,10 +34,16 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: chien_0 2
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: estToucher
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: Base layers
     m_StateMachine: {fileID: 5076706643457436568}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -55,11 +61,11 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: Base layers
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4778543809379899481}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 390, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
