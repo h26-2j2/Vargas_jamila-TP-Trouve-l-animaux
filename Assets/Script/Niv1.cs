@@ -7,7 +7,7 @@ public class Niv1 : MonoBehaviour
     public bool estChien;
     public string reponse;
 
-    public static bool changementScene = false;
+    public static bool changementScene;
 
     //sprites
     //private SpriteRenderer spriteR;
