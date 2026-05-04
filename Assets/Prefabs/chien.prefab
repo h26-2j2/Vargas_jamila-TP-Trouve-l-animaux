@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7722733914481212454}
   - component: {fileID: 2737783049981115495}
   - component: {fileID: 4097082949407025805}
+  - component: {fileID: 7167563784602316170}
   - component: {fileID: 7485348245551186574}
-  - component: {fileID: 1876026410135740058}
   - component: {fileID: 8650303706961037470}
   m_Layer: 0
   m_Name: chien
@@ -215,6 +215,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7167563784602316170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3512153567050538888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb543d34403bfc4383ce8796676a102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::Interractivit\xE9animaux"
+  estChien: 1
+  reponse: 
+  Victoire: {fileID: 0}
+  VictoireA: {fileID: 0}
+  bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
+  erreurS: {fileID: 8300000, guid: 013005a285468ed469060b0237d60a65, type: 3}
+  Mbravo: {fileID: 8300000, guid: 9063050a7dfbdb145b8a0bfa057be9d5, type: 3}
 --- !u!114 &7485348245551186574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +251,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1876026410135740058}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Niv1, Assembly-CSharp
           m_MethodName: Bonnereponse
           m_Mode: 1
@@ -244,25 +263,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1876026410135740058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3512153567050538888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4a3f4f5583aa44c83c97ba19cff484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Niv1
-  estChien: 1
-  reponse: chat
-  Victoire: {fileID: 0}
-  VictoireA: {fileID: 0}
-  bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
-  erreurS: {fileID: 8300000, guid: 013005a285468ed469060b0237d60a65, type: 3}
-  Mbravo: {fileID: 8300000, guid: 9063050a7dfbdb145b8a0bfa057be9d5, type: 3}
 --- !u!60 &8650303706961037470
 PolygonCollider2D:
   m_ObjectHideFlags: 0

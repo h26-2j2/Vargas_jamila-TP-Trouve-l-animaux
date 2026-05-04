@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class Niv1 : MonoBehaviour
+public class Interractivit√©animaux : MonoBehaviour
 {
     //variables public
     public bool estChien;
@@ -10,12 +9,10 @@ public class Niv1 : MonoBehaviour
     public static bool changementScene;
 
     //sprites
-    //private SpriteRenderer spriteR;
 
     //animation
     public GameObject Victoire;
     public Animator VictoireA;
-    //Animator animS;
 
     //sons
     public AudioClip bravoS;
@@ -27,17 +24,16 @@ public class Niv1 : MonoBehaviour
 
     void Start()
     {
-        //rÈcupÈrer le composant AudioSource
+        //r√©cup√©rer le composant AudioSource
         audioS = GetComponent<AudioSource>();
+        changementScene = false;
 
-        //spriteR = GetComponent<SpriteRenderer>();
-        //animS = GetComponent<Animator>();
     }
 
-   
-    //interaction pour trouver la bonne rÈponse
+
+    //interaction pour trouver la bonne r√©ponse
     public void Bonnereponse()
-        {
+    {
         if (estChien && reponse == "chien")
         {
             //audio
@@ -67,20 +63,4 @@ public class Niv1 : MonoBehaviour
             audioS.PlayOneShot(erreurS, 5f);
         }
     }
-
-    //animation future
-
-    //public void Animation()
-    //{
-    //    if (estChien) {
-
-    //        animS.Play("estToucher", 0, 0f);
-    //        //animS.ResetTrigger("estToucher");
-    //        //animS.SetTrigger("estToucher");
-    //    }
-    //    else if (!estChien)
-    //    {
-    //       //animS.Play("chat_0 2");
-    //    }
-    //}
 }

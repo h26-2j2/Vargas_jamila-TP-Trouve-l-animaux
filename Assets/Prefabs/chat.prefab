@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 380342988391826937}
   - component: {fileID: 2061174877140868207}
   - component: {fileID: 8031081077894932906}
-  - component: {fileID: 5765934124711938882}
+  - component: {fileID: 8459606570581053999}
   - component: {fileID: 5437467541866051478}
   - component: {fileID: 7737512044041909248}
   m_Layer: 0
@@ -215,7 +215,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5765934124711938882
+--- !u!114 &8459606570581053999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,11 +224,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1604859016080509995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4a3f4f5583aa44c83c97ba19cff484, type: 3}
+  m_Script: {fileID: 11500000, guid: fcb543d34403bfc4383ce8796676a102, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Niv1
+  m_EditorClassIdentifier: "Assembly-CSharp::Interractivit\xE9animaux"
   estChien: 0
-  reponse: chat
+  reponse: 
   Victoire: {fileID: 0}
   VictoireA: {fileID: 0}
   bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
@@ -251,8 +251,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5765934124711938882}
-          m_TargetAssemblyTypeName: Niv1, Assembly-CSharp
+        - m_Target: {fileID: 8459606570581053999}
+          m_TargetAssemblyTypeName: "Interractivit\xE9animaux, Assembly-CSharp"
           m_MethodName: Bonnereponse
           m_Mode: 1
           m_Arguments:
