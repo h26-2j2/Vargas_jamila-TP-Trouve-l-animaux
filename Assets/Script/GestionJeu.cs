@@ -56,20 +56,23 @@ public class GestionJeu : MonoBehaviour
 
     public void Niv1Reussis()
     {
-        if (Interractivitéanimaux.changementScene == true) { 
+        
+        if (Interractivitéanimaux.changementScene == true ) {
+            Debug.Log("Niv1Reussis"); 
            SceneAleatoire = Random.Range(0f, 100f);
             if(SceneAleatoire < 50f)
-        {
+            {
                 SceneManager.LoadScene("niv-2-chien");
                 //audioS.PlayOneShot(nivchien, 20f);
-                Interractivitéanimaux.changementScene = false;
+               
             }
         else if (SceneAleatoire >= 50f)
             {
                 SceneManager.LoadScene("niv-2-chat");
                 //audioS.PlayOneShot(nivchat, 20f);
-                Interractivitéanimaux.changementScene= false;
-            }
+               
+            } 
+            Interractivitéanimaux.changementScene = false;
         }
     }
 

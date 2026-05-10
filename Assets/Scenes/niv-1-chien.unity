@@ -1298,6 +1298,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7916046121718562714, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
   m_PrefabInstance: {fileID: 1511958106}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1062627551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7167563784602316170, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+  m_PrefabInstance: {fileID: 1511958106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb543d34403bfc4383ce8796676a102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::Interractivit\xE9animaux"
 --- !u!1001 &1347815702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1358,6 +1369,10 @@ PrefabInstance:
       propertyPath: reponse
       value: chien
       objectReference: {fileID: 0}
+    - target: {fileID: 8459606570581053999, guid: 2b177389055946642941d63708f0ffed, type: 3}
+      propertyPath: Victoire
+      value: 
+      objectReference: {fileID: 1928419844}
     - target: {fileID: 8459606570581053999, guid: 2b177389055946642941d63708f0ffed, type: 3}
       propertyPath: VictoireA
       value: 
@@ -1479,9 +1494,25 @@ PrefabInstance:
       value: chien
       objectReference: {fileID: 0}
     - target: {fileID: 7167563784602316170, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: Victoire
+      value: 
+      objectReference: {fileID: 1928419844}
+    - target: {fileID: 7167563784602316170, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
       propertyPath: VictoireA
       value: 
       objectReference: {fileID: 1928419846}
+    - target: {fileID: 7485348245551186574, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1062627551}
+    - target: {fileID: 7485348245551186574, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Bonnereponse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485348245551186574, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: "Interractivit\xE9animaux, Assembly-CSharp"
+      objectReference: {fileID: 0}
     - target: {fileID: 7916046121718562714, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5644
