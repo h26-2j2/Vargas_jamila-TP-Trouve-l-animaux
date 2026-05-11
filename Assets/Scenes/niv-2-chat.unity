@@ -1226,6 +1226,10 @@ PrefabInstance:
       value: chien
       objectReference: {fileID: 0}
     - target: {fileID: 7167563784602316170, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: reponse
+      value: chat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167563784602316170, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
       propertyPath: Victoire
       value: 
       objectReference: {fileID: 2072670275}
@@ -3478,6 +3482,10 @@ PrefabInstance:
     - target: {fileID: 7369645534290516324, guid: 2b177389055946642941d63708f0ffed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459606570581053999, guid: 2b177389055946642941d63708f0ffed, type: 3}
+      propertyPath: reponse
+      value: chat
       objectReference: {fileID: 0}
     - target: {fileID: 8459606570581053999, guid: 2b177389055946642941d63708f0ffed, type: 3}
       propertyPath: Victoire

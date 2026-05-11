@@ -104,9 +104,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3512153567050538888}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 53ca3501346bb5f4599b393c128c6522, type: 2}
+  m_Controller: {fileID: 9100000, guid: 88e621d78a93d7543afad1aae07e4a92, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -229,7 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: "Assembly-CSharp::Interractivit\xE9animaux"
   estChien: 1
   reponse: 
+  gestionJeu: {fileID: 0}
   Victoire: {fileID: 0}
+  reussirAnimation: 0
   bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
   erreurS: {fileID: 8300000, guid: 013005a285468ed469060b0237d60a65, type: 3}
   Mbravo: {fileID: 8300000, guid: 9063050a7dfbdb145b8a0bfa057be9d5, type: 3}

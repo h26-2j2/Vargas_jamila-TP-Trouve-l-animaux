@@ -14,7 +14,8 @@ public class Interractivitéanimaux : MonoBehaviour
 
     //animation
     public GameObject Victoire;
-    //public Animator VictoireA;
+
+    Animator anim;
 
     //sons
     public AudioClip bravoS;
@@ -28,12 +29,15 @@ public class Interractivitéanimaux : MonoBehaviour
     {
         //récupérer le composant AudioSource
         audioS = GetComponent<AudioSource>();
+        //recuperer le composant Animator
+        anim = GetComponent<Animator>();
+
+        //récuperer le script GestionJeu
         GameObject jeu = GameObject.Find("Jeu");
         gestionJeu = jeu.GetComponent<GestionJeu>();
-        //changementScene = false;
+        
 
     }
-
 
     //interaction pour trouver la bonne réponse
     public void Bonnereponse()
@@ -45,9 +49,10 @@ public class Interractivitéanimaux : MonoBehaviour
             audioS.PlayOneShot(Mbravo, 0.2f);
             //animation victoire
             Victoire.SetActive(true);
-            //VictoireA.Play("Victoire", 0, 1f);
+            
 
             changementScene = true;
+            anim.SetTrigger("Reussir");
 
             Invoke("NivReussis", 2f);
         }
@@ -58,9 +63,9 @@ public class Interractivitéanimaux : MonoBehaviour
             audioS.PlayOneShot(Mbravo, 0.2f);
             //animation victoire
             Victoire.SetActive(true);
-            //VictoireA.Play("Victoire", 0, 0f);
 
             changementScene = true;
+            anim.SetTrigger("Reussir");
 
             Invoke("NivReussis", 2f);
         }
@@ -73,6 +78,7 @@ public class Interractivitéanimaux : MonoBehaviour
     }
     public void NivReussis()
     {
+
         if (changementScene && SceneManager.GetActiveScene().name == "niv-1-chien" ||
       changementScene && SceneManager.GetActiveScene().name == "niv-1-chat")
         {

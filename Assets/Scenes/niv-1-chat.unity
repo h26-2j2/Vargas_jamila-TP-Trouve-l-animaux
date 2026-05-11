@@ -1835,6 +1835,10 @@ PrefabInstance:
       propertyPath: VictoireA
       value: 
       objectReference: {fileID: 1605230281}
+    - target: {fileID: 2737783049981115495, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 88e621d78a93d7543afad1aae07e4a92, type: 2}
     - target: {fileID: 3512153567050538888, guid: f8da83ff587daa74bb79b2b29698a808, type: 3}
       propertyPath: m_Name
       value: chien
@@ -1991,6 +1995,10 @@ PrefabInstance:
       propertyPath: VictoireA
       value: 
       objectReference: {fileID: 1605230281}
+    - target: {fileID: 8459606570581053999, guid: 2b177389055946642941d63708f0ffed, type: 3}
+      propertyPath: reussirAnimation
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

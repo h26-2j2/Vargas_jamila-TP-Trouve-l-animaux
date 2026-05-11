@@ -25,7 +25,10 @@ public class GestionJeu : MonoBehaviour
         audioS = GetComponent<AudioSource>();
 
         //Recommencer le jeu après 10 secondes
-        Invoke("Recommencer",10f); 
+        Invoke("Recommencer",10f);
+        
+        //Melange premier fois
+        SceneAleatoire = Random.Range(0f, 100f);
     }
 
     void Update()
@@ -46,11 +49,13 @@ public class GestionJeu : MonoBehaviour
         {
             SceneManager.LoadScene("niv-1-chien");
             audioS.PlayOneShot(nivchien, 20f);
+            SceneAleatoire = Random.Range(0f, 100f);
         }
         else if (SceneAleatoire >= 50f)
         {
             SceneManager.LoadScene("niv-1-chat");
-            audioS.PlayOneShot(nivchat, 20f);    
+            audioS.PlayOneShot(nivchat, 20f);
+            SceneAleatoire = Random.Range(0f, 100f);
         }
     }
 
@@ -60,18 +65,20 @@ public class GestionJeu : MonoBehaviour
         if (Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-1-chien" ||
             Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-1-chat") {
             Debug.Log("Niv1Reussis"); 
-           SceneAleatoire = Random.Range(0f, 100f);
+          
             if(SceneAleatoire < 50f)
             {
                 SceneManager.LoadScene("niv-2-chien");
                 //audioS.PlayOneShot(nivchien, 20f);
-               
+                SceneAleatoire = Random.Range(0f, 100f);
+
             }
         else if (SceneAleatoire >= 50f)
             {
                 SceneManager.LoadScene("niv-2-chat");
                 //audioS.PlayOneShot(nivchat, 20f);
-               
+                SceneAleatoire = Random.Range(0f, 100f);
+
             } 
             Interractivitéanimaux.changementScene = false;
         }
@@ -83,7 +90,6 @@ public class GestionJeu : MonoBehaviour
            Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-2-chat")
         {
             Debug.Log("Niv2Reussis");
-            SceneAleatoire = Random.Range(0f, 100f);
             if (SceneAleatoire < 50f)
             {
                 SceneManager.LoadScene("niv-3-chien");
