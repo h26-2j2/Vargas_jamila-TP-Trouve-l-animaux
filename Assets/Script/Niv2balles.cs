@@ -7,6 +7,7 @@ public class Niv2balles : MonoBehaviour
     public void Prendballe(BaseEventData eventData)
     {
         gameObject.SetActive(false);
+        gameObject.GetComponent<Collider2D>().enabled = false;
 
     }
 

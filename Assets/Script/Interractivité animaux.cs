@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interractivitéanimaux : MonoBehaviour
 {
@@ -61,11 +62,10 @@ public class Interractivitéanimaux : MonoBehaviour
 
             changementScene = true;
 
-           Invoke("NivReussis", 2f);
+            Invoke("NivReussis", 2f);
         }
         else
         {
-            Debug.Log("Mauvaise réponse");
             changementScene = false;
             //si pas bonne reponse
             audioS.PlayOneShot(erreurS, 5f);
@@ -73,9 +73,15 @@ public class Interractivitéanimaux : MonoBehaviour
     }
     public void NivReussis()
     {
-                if (changementScene)
+        if (changementScene && SceneManager.GetActiveScene().name == "niv-1-chien" ||
+      changementScene && SceneManager.GetActiveScene().name == "niv-1-chat")
         {
             gestionJeu.Niv1Reussis();
+        }
+        else if (changementScene && SceneManager.GetActiveScene().name == "niv-2-chien" ||
+            changementScene && SceneManager.GetActiveScene().name == "niv-2-chat")
+        {
+            gestionJeu.Niv2Reussis();
         }
     }
 }

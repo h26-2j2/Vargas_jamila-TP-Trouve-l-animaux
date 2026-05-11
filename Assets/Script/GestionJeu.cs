@@ -57,7 +57,8 @@ public class GestionJeu : MonoBehaviour
     public void Niv1Reussis()
     {
         
-        if (Interractivitéanimaux.changementScene == true ) {
+        if (Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-1-chien" ||
+            Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-1-chat") {
             Debug.Log("Niv1Reussis"); 
            SceneAleatoire = Random.Range(0f, 100f);
             if(SceneAleatoire < 50f)
@@ -78,7 +79,25 @@ public class GestionJeu : MonoBehaviour
 
     public void Niv2Reussis()
     {
+        if (Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-2-chien" ||
+           Interractivitéanimaux.changementScene == true && SceneManager.GetActiveScene().name == "niv-2-chat")
+        {
+            Debug.Log("Niv2Reussis");
+            SceneAleatoire = Random.Range(0f, 100f);
+            if (SceneAleatoire < 50f)
+            {
+                SceneManager.LoadScene("niv-3-chien");
+                //audioS.PlayOneShot(nivchien, 20f);
 
+            }
+            else if (SceneAleatoire >= 50f)
+            {
+                SceneManager.LoadScene("niv-3-chat");
+                //audioS.PlayOneShot(nivchat, 20f);
+
+            }
+            Interractivitéanimaux.changementScene = false;
+        }
     }
 
     public void Niv3Reussis()

@@ -1272,7 +1272,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1375957753}
-  - component: {fileID: 1375957752}
   m_Layer: 0
   m_Name: interaction
   m_TagString: Untagged
@@ -1280,25 +1279,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1375957752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375957751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4a3f4f5583aa44c83c97ba19cff484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Niv1
-  estChien: 0
-  reponse: 
-  Victoire: {fileID: 0}
-  VictoireA: {fileID: 0}
-  bravoS: {fileID: 0}
-  erreurS: {fileID: 0}
-  Mbravo: {fileID: 0}
 --- !u!4 &1375957753
 Transform:
   m_ObjectHideFlags: 0
