@@ -6,7 +6,7 @@ public class Niv2balles : MonoBehaviour
     //Permet d'effacer les balles
     public void Prendballe(BaseEventData eventData)
     {
-        gameObject.SetActive(false);
+        //enlever les collisions
         gameObject.GetComponent<Collider2D>().enabled = false;
 
     }

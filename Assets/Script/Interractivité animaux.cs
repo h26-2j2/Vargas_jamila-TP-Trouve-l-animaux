@@ -10,8 +10,6 @@ public class Interractivitéanimaux : MonoBehaviour
     public static bool changementScene;
     public GestionJeu gestionJeu;
 
-    //sprites
-
     //animation
     public GameObject Victoire;
 
@@ -49,11 +47,13 @@ public class Interractivitéanimaux : MonoBehaviour
             audioS.PlayOneShot(Mbravo, 0.2f);
             //animation victoire
             Victoire.SetActive(true);
-            
 
+            //changement de scene a true pour gestionJeu
             changementScene = true;
+            //animation de reussite
             anim.SetTrigger("Reussir");
 
+            //changement de scene apres 2 secondes
             Invoke("NivReussis", 2f);
         }
         else if (!estChien && reponse == "chat")
@@ -64,18 +64,24 @@ public class Interractivitéanimaux : MonoBehaviour
             //animation victoire
             Victoire.SetActive(true);
 
+            //changement de scene a true pour gestionJeu
             changementScene = true;
+            //animation de reussite
             anim.SetTrigger("Reussir");
 
+            //changement de scene apres 2 secondes
             Invoke("NivReussis", 2f);
         }
         else
         {
+            //assurer que le changement de scene est a falsw
             changementScene = false;
             //si pas bonne reponse
             audioS.PlayOneShot(erreurS, 5f);
         }
     }
+
+    //changement de scene apres la reussite du niveau
     public void NivReussis()
     {
 

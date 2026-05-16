@@ -2501,6 +2501,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1351449164}
     m_Modifications:
+    - target: {fileID: 4896942451834315461, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5754383358617890373, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
       propertyPath: m_Name
       value: balle-bleu-inter (1)
@@ -3509,6 +3513,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1351449164}
     m_Modifications:
+    - target: {fileID: 4896942451834315461, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5754383358617890373, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
       propertyPath: m_Name
       value: balle-bleu-inter (2)
@@ -4042,6 +4050,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1351449164}
     m_Modifications:
+    - target: {fileID: 4896942451834315461, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5754383358617890373, guid: b30b531adf6b6aa42bb6dc096ffa825c, type: 3}
       propertyPath: m_Name
       value: balle-bleu-inter
