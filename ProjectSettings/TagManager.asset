@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BoutonChat
   - BoutonChien
+  - Niv3Bon
+  - Niv3Mauvais
   layers:
   - Default
   - TransparentFX

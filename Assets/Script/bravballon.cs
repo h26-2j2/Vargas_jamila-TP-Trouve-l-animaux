@@ -28,8 +28,6 @@ public class bravballon : MonoBehaviour
         {
             //générer une nouvelle position X aléatoire pour le ballon
             positionX = Random.Range(-10f, 10f);
-            //ajouter positionx
-            limiteYMin = limiteYMin + positionX;
             //nouveau deplacement
             deplacementY = limiteYMin;
         }
