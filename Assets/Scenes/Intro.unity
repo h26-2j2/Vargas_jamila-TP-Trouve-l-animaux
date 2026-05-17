@@ -833,8 +833,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b291c030e2868f64c9028567761e9679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GestionJeu
-  nivchat: {fileID: 8300000, guid: aa2e51c542bac014ea2b0f2fa2ecea3d, type: 3}
-  nivchien: {fileID: 8300000, guid: fa2eecc5b39646f46bbfa352b9d11dba, type: 3}
+  niv1chat: {fileID: 8300000, guid: aa2e51c542bac014ea2b0f2fa2ecea3d, type: 3}
+  niv1chien: {fileID: 8300000, guid: fa2eecc5b39646f46bbfa352b9d11dba, type: 3}
+  niv2chat: {fileID: 0}
+  niv2chien: {fileID: 0}
+  niv3chat: {fileID: 0}
+  niv3chien: {fileID: 0}
 --- !u!1 &1515178216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1418,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3899264874753553345, guid: c0411e7a968dc49448b74e100e5cae1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

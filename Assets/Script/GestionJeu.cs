@@ -9,8 +9,14 @@ public class GestionJeu : MonoBehaviour
 
 
     //sons
-    public AudioClip nivchat;
-    public AudioClip nivchien;
+    public AudioClip niv1chat;
+    public AudioClip niv1chien;
+
+    public AudioClip niv2chat;
+    public AudioClip niv2chien;
+
+    public AudioClip niv3chat;
+    public AudioClip niv3chien;
 
     AudioSource audioS;
 
@@ -23,9 +29,6 @@ public class GestionJeu : MonoBehaviour
 
         //Récupérer le composant AudioSource
         audioS = GetComponent<AudioSource>();
-
-        //Recommencer le jeu après 10 secondes
-        Invoke("Recommencer",10f);
         
         //Melange premier fois
         SceneAleatoire = Random.Range(0f, 100f);
@@ -50,7 +53,8 @@ public class GestionJeu : MonoBehaviour
             //load la scene du chien
             SceneManager.LoadScene("niv-1-chien");
             //audio niveau jeu
-            audioS.PlayOneShot(nivchien, 20f);
+            audioS.PlayOneShot(niv1chien, 20f);
+           
             //change la scene aleatoire pour le prochain niveau
             SceneAleatoire = Random.Range(0f, 100f);
         }
@@ -59,7 +63,8 @@ public class GestionJeu : MonoBehaviour
             //load la scene du chat
             SceneManager.LoadScene("niv-1-chat");
             //audio niveau jeu
-            audioS.PlayOneShot(nivchat, 20f);
+            audioS.PlayOneShot(niv1chat, 20f);
+            
             //change la scene aleatoire pour le prochain niveau
             SceneAleatoire = Random.Range(0f, 100f);
         }
@@ -76,16 +81,25 @@ public class GestionJeu : MonoBehaviour
           
             if(SceneAleatoire < 50f)
             {
+                //arreter audio niveau precedent
+                audioS.Stop();
                 //load la scene du chien
                 SceneManager.LoadScene("niv-2-chien");
+               
                 //audio niveau jeu
                 //audioS.PlayOneShot(nivchien, 20f);
+                if(Mouse.current.leftButton.wasPressedThisFrame)
+                {
+                    audioS.Stop();
+                }
                 //change la scene aleatoire pour le prochain niveau
                 SceneAleatoire = Random.Range(0f, 100f);
 
             }
         else if (SceneAleatoire >= 50f)
             {
+                //arreter audio niveau precedent
+                audioS.Stop();
                 //load la scene du chat
                 SceneManager.LoadScene("niv-2-chat");
                 //audio niveau jeu
@@ -107,22 +121,21 @@ public class GestionJeu : MonoBehaviour
             Debug.Log("Niv2Reussis");
             if (SceneAleatoire < 50f)
             {
+                //arreter audio niveau precedent
+                audioS.Stop();
                 //load la scene du chien
                 SceneManager.LoadScene("niv-3-chien");
                 //audio niveau jeu
                 //audioS.PlayOneShot(nivchien, 20f);
-                //change la scene aleatoire pour le prochain niveau
-                SceneAleatoire = Random.Range(0f, 100f);
-
             }
             else if (SceneAleatoire >= 50f)
             {
+                //arreter audio niveau precedent
+                audioS.Stop();
                 //load la scene du chat
                 SceneManager.LoadScene("niv-3-chat");
                 //audio niveau jeu
                 //audioS.PlayOneShot(nivchat, 20f);
-                //change la scene aleatoire pour le prochain niveau
-                SceneAleatoire = Random.Range(0f, 100f);
 
             }
             Interractivitéanimaux.changementScene = false;
@@ -131,19 +144,31 @@ public class GestionJeu : MonoBehaviour
 
     public void Niv3Reussis()
     {
+        if(SceneManager.GetActiveScene().name == "niv-3-chien" || SceneManager.GetActiveScene().name == "niv-3-chat") 
+        { 
+            Debug.Log("Niv3Reussis");
 
+            //arreter audio niveau precedent
+            audioS.Stop();
+            SceneManager.LoadScene("bravo");
+
+        Invoke("Recommencer", 5f);
+        }
     }
     //recommencer le jeu 
     public void Recommencer()
     {
-        //if (Interractivitéanimaux.changementScene == true)
-        //{
-        //    //enlever le son
-        //    audioS.Stop();
-        //    //remettre la variable a false
-        //    Interractivitéanimaux.changementScene = false;
-        //    //mettre la scene du départ
-        //    SceneManager.LoadScene("intro");
-        //}
+            //enlever le son
+            audioS.Stop();
+      
+        //remettre la variable a false
+        Interractivitéanimaux.changementScene = false;
+            //mettre la scene du départ
+            SceneManager.LoadScene("intro");
+        //Assurer que la variable change
+        SceneAleatoire = Random.Range(0f, 100f);
+
+        //detruit le script pour recommencer le jeu
+        Destroy(gameObject);
     }
 }

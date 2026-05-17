@@ -58,6 +58,7 @@ public class Interractivitéanimaux : MonoBehaviour
         }
         else if (!estChien && reponse == "chat")
         {
+            
             //audio
             audioS.PlayOneShot(bravoS, 5f);
             audioS.PlayOneShot(Mbravo, 0.2f);

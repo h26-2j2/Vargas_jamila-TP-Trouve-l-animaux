@@ -601,7 +601,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1007,6 +1007,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 437767327}
     m_Modifications:
+    - target: {fileID: 686727436921837615, guid: cbb46f5a59a53d14ca72d7a143250c0b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4945194280689757019, guid: cbb46f5a59a53d14ca72d7a143250c0b, type: 3}
       propertyPath: m_Name
       value: personnage
@@ -1322,7 +1326,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3091712118233222367, guid: 9a4adc43d2cb0bb4f8a7bc4d565a11c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1435,7 +1439,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1634,7 +1638,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3899264874753553345, guid: c0411e7a968dc49448b74e100e5cae1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
