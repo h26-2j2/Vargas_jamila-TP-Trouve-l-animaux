@@ -6,4 +6,3 @@ Fait par: Jamila Vargas
 
 ### Jeu: https://h26-2j2.github.io/Vargas_jamila-TP-Trouve-l-animaux/
 
-credit: freepik
