@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Deplacementperso : MonoBehaviour
 {
-    //Pour le déplacement du personnage:
+    //Pour le dï¿½placement du personnage:
     //https://www.youtube.com/watch?v=POcQy8aZ6Uw
 
     //variables public
@@ -35,13 +35,13 @@ public class Deplacementperso : MonoBehaviour
 
     void Start()
     {
-        //récupérer les composants
+        //rï¿½cupï¿½rer les composants
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         audioS = GetComponent<AudioSource>();
 
-        //récuperer le script GestionJeu
+        //rï¿½cuperer le script GestionJeu
         GameObject jeu = GameObject.Find("Jeu");
         gestionJeu = jeu.GetComponent<GestionJeu>();
     }
@@ -95,6 +95,8 @@ public class Deplacementperso : MonoBehaviour
                 //audio felicitation
                 audioS.PlayOneShot(bravoS, 5f);
 
+                //personnage arrete de bouger
+                rb.linearVelocity = Vector2.zero;
 
                 //changement de scene apres 2 secondes
                 Invoke("NivReussis", 2f);
