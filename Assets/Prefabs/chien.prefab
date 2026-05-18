@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3512153567050538888}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.55, y: -2.34, z: 0}
+  m_LocalPosition: {x: -5.35, y: -2.14, z: 0}
   m_LocalScale: {x: -0.73667234, y: 0.72898996, z: 0.6984}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -231,7 +231,6 @@ MonoBehaviour:
   reponse: 
   gestionJeu: {fileID: 0}
   Victoire: {fileID: 0}
-  reussirAnimation: 0
   bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
   erreurS: {fileID: 8300000, guid: 013005a285468ed469060b0237d60a65, type: 3}
   Mbravo: {fileID: 8300000, guid: 9063050a7dfbdb145b8a0bfa057be9d5, type: 3}

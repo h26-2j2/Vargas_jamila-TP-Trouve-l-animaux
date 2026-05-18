@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.48869354, g: 0.088679194, b: 1, a: 1}
+  m_Color: {r: 0.09019607, g: 0.34981, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -598,8 +598,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292613225
-  m_fontColor: {r: 0.41029283, g: 0.07843135, b: 0.8627451, a: 1}
+    rgba: 4292624660
+  m_fontColor: {r: 0.07843135, g: 0.2536277, b: 0.8627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -835,10 +835,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GestionJeu
   niv1chat: {fileID: 8300000, guid: aa2e51c542bac014ea2b0f2fa2ecea3d, type: 3}
   niv1chien: {fileID: 8300000, guid: fa2eecc5b39646f46bbfa352b9d11dba, type: 3}
-  niv2chat: {fileID: 0}
-  niv2chien: {fileID: 0}
-  niv3chat: {fileID: 0}
-  niv3chien: {fileID: 0}
+  niv2chat: {fileID: 8300000, guid: 57062e0581ae1a34ab4becae24d1c33c, type: 3}
+  niv2chien: {fileID: 8300000, guid: 37b46f798f15ee14280a9cbd56d07b6f, type: 3}
+  niv3chat: {fileID: 8300000, guid: 49373e05cc5a71e49bcdfeb28a0935f2, type: 3}
+  niv3chien: {fileID: 8300000, guid: 6734d71af40acc448832abf7b7615810, type: 3}
+  Mfin: {fileID: 8300000, guid: 9aaed2858b0bbe54fa12387f8e96f788, type: 3}
 --- !u!1 &1515178216
 GameObject:
   m_ObjectHideFlags: 0

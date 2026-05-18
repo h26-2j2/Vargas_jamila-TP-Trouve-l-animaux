@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 445ef0ad6fbe4ba4aa46259ad2773947
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gestionJeu: {instanceID: 0}
+  - bravoS: {fileID: 8300000, guid: eb84d3fbe37e7cf4ca58681b723316f4, type: 3}
+  - erreurS: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

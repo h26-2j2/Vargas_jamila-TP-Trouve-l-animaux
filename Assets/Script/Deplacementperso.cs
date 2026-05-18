@@ -13,8 +13,13 @@ public class Deplacementperso : MonoBehaviour
 
     Vector2 deplacementInput;
 
-    public static bool changementScene;
     public GestionJeu gestionJeu;
+
+    //sons
+    public AudioClip bravoS;
+    public AudioClip erreurS;
+
+    AudioSource audioS;
 
     //rigidbody
     Rigidbody2D rb;
@@ -23,13 +28,18 @@ public class Deplacementperso : MonoBehaviour
     SpriteRenderer sr;
 
     //Animator
+    public GameObject Victoire;
+
     Animator anim;
+
 
     void Start()
     {
+        //récupérer les composants
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        audioS = GetComponent<AudioSource>();
 
         //récuperer le script GestionJeu
         GameObject jeu = GameObject.Find("Jeu");
@@ -39,13 +49,16 @@ public class Deplacementperso : MonoBehaviour
     void Update()
     {
         //animation + deplacement personnage
-        if (SceneManager.GetActiveScene().name == "niv-3-chat" || SceneManager.GetActiveScene().name == "niv-3-chien")
+        if (SceneManager.GetActiveScene().name == "niv-3-chat" || SceneManager.GetActiveScene().name == "niv-3-chien" || SceneManager.GetActiveScene().name == "niv-3-chat-alt" || SceneManager.GetActiveScene().name == "niv-3-chien-alt")
         {
+            //deplacement du personnage
             rb.linearVelocity = vitessedeplacement * deplacementInput;
 
-            if(deplacementInput.x != 0 || deplacementInput.y != 0)
+            //animation de marche
+            if (deplacementInput.x != 0 || deplacementInput.y != 0)
             {
                 anim.SetBool("Marche", true);
+                //permet de flipper le perso
                 sr.flipX = rb.linearVelocity.x > 0;
             }
             else
@@ -62,7 +75,7 @@ public class Deplacementperso : MonoBehaviour
         }
     }
 
-
+    //pour mouvement personnage
     public void OnDeplacement(InputAction.CallbackContext context)
     {
         deplacementInput = context.ReadValue<Vector2>();
@@ -70,20 +83,31 @@ public class Deplacementperso : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Niv3Bon"))
+        //finir audio intro
+        if (gestionJeu.finintro)
         {
-            anim.SetTrigger("Trouver");
-            //audio felicitation
+            if (collision.gameObject.CompareTag("Niv3Bon"))
+            {
+                //animation victoire
+                anim.SetTrigger("Trouver");
+                Victoire.SetActive(true);
 
-            //changement de scene apres 2 secondes
-            Invoke("NivReussis", 2f);
-        }
-        else if (collision.gameObject.CompareTag("Niv3Mauvais"))
-        {
-            //audio pas bonne reponse
+                //audio felicitation
+                audioS.PlayOneShot(bravoS, 5f);
+
+
+                //changement de scene apres 2 secondes
+                Invoke("NivReussis", 2f);
+            }
+            else if (collision.gameObject.CompareTag("Niv3Mauvais"))
+            {
+                //audio pas bonne reponse
+                audioS.PlayOneShot(erreurS, 5f);
+            }
         }
     }
 
+    //chercher fonction niv3reussir
     public void NivReussis()
     {
         gestionJeu.Niv3Reussis();

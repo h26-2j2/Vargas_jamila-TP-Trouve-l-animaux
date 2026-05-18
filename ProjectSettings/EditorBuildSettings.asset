@@ -24,8 +24,14 @@ EditorBuildSettings:
     path: Assets/Scenes/niv-3-chat.unity
     guid: 2392b9284a26fcc4d91ac3959020c931
   - enabled: 1
+    path: Assets/Scenes/niv-3-chat-alt.unity
+    guid: 421b87739f046e245a544ac304b7b6ec
+  - enabled: 1
     path: Assets/Scenes/niv-3-chien.unity
-    guid: ed9482cd5e170aa459e508560d64ed2d
+    guid: 851a64972efbe6a469a1193d7ed9908e
+  - enabled: 1
+    path: Assets/Scenes/niv-3-chien-alt.unity
+    guid: be6c1fcc07383634ebafb2d622102ba6
   - enabled: 1
     path: Assets/Scenes/bravo.unity
     guid: 52ec58c98889a424c8c5d7c244ac96ce

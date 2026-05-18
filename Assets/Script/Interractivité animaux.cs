@@ -25,60 +25,74 @@ public class Interractivitéanimaux : MonoBehaviour
 
     void Start()
     {
-        //récupérer le composant AudioSource
+        //récupérer les composant
         audioS = GetComponent<AudioSource>();
-        //recuperer le composant Animator
         anim = GetComponent<Animator>();
 
         //récuperer le script GestionJeu
         GameObject jeu = GameObject.Find("Jeu");
         gestionJeu = jeu.GetComponent<GestionJeu>();
-        
+
 
     }
 
     //interaction pour trouver la bonne réponse
     public void Bonnereponse()
     {
-        if (estChien && reponse == "chien")
+        //finir audio intro
+        if (gestionJeu.finintro)
         {
-            //audio
-            audioS.PlayOneShot(bravoS, 5f);
-            audioS.PlayOneShot(Mbravo, 0.2f);
-            //animation victoire
-            Victoire.SetActive(true);
+            if (estChien && reponse == "chien")
+            {
+                //arreter audio pour pas stacker les sons
+                audioS.Stop();
+                //audio
+                audioS.PlayOneShot(bravoS, 5f);
+                audioS.PlayOneShot(Mbravo, 0.2f);
 
-            //changement de scene a true pour gestionJeu
-            changementScene = true;
-            //animation de reussite
-            anim.SetTrigger("Reussir");
+                //animation victoire
+                Victoire.SetActive(true);
 
-            //changement de scene apres 2 secondes
-            Invoke("NivReussis", 2f);
-        }
-        else if (!estChien && reponse == "chat")
-        {
-            
-            //audio
-            audioS.PlayOneShot(bravoS, 5f);
-            audioS.PlayOneShot(Mbravo, 0.2f);
-            //animation victoire
-            Victoire.SetActive(true);
+                //changement de scene a true pour gestionJeu
+                changementScene = true;
 
-            //changement de scene a true pour gestionJeu
-            changementScene = true;
-            //animation de reussite
-            anim.SetTrigger("Reussir");
+                //animation de reussite
+                anim.SetTrigger("Reussir");
 
-            //changement de scene apres 2 secondes
-            Invoke("NivReussis", 2f);
-        }
-        else
-        {
-            //assurer que le changement de scene est a falsw
-            changementScene = false;
-            //si pas bonne reponse
-            audioS.PlayOneShot(erreurS, 5f);
+                //changement de scene apres 2 secondes
+                Invoke("NivReussis", 2f);
+            }
+            else if (!estChien && reponse == "chat")
+            {
+                //arreter audio pour pas stacker les sons
+                audioS.Stop();
+                //audio
+                audioS.PlayOneShot(bravoS, 5f);
+                audioS.PlayOneShot(Mbravo, 0.2f);
+
+                //animation victoire
+                Victoire.SetActive(true);
+
+                //changement de scene a true pour gestionJeu
+                changementScene = true;
+
+                //animation de reussite
+                anim.SetTrigger("Reussir");
+
+                //changement de scene apres 2 secondes
+                Invoke("NivReussis", 2f);
+            }
+            else
+            {
+                //arreter audio pour pas stacker les sons
+                audioS.Stop();
+                //assurer que le changement de scene est a falsw
+                changementScene = false;
+                //si pas bonne reponse
+                audioS.PlayOneShot(erreurS, 5f);
+
+
+            }
         }
     }
 
@@ -90,11 +104,14 @@ public class Interractivitéanimaux : MonoBehaviour
       changementScene && SceneManager.GetActiveScene().name == "niv-1-chat")
         {
             gestionJeu.Niv1Reussis();
+            gestionJeu.finintro = false;
         }
         else if (changementScene && SceneManager.GetActiveScene().name == "niv-2-chien" ||
             changementScene && SceneManager.GetActiveScene().name == "niv-2-chat")
         {
             gestionJeu.Niv2Reussis();
+            gestionJeu.finintro = false;
         }
     }
+
 }
