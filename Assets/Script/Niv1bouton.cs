@@ -18,13 +18,15 @@ public class Niv1bouton : MonoBehaviour
 
     //function chien audio
     public void PlayChien()
-    {
+    {   
+        audioS.Stop();
         audioS.PlayOneShot(BChien, 0.4f);
     }
 
     //function chat audio
     public void PlayChat()
     {
+        audioS.Stop();
         audioS.PlayOneShot(BChat, 0.9f);
     }
 }

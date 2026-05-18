@@ -95,9 +95,6 @@ public class Deplacementperso : MonoBehaviour
                 //audio felicitation
                 audioS.PlayOneShot(bravoS, 5f);
 
-                //personnage arrete de bouger
-                rb.linearVelocity = Vector2.zero;
-
                 //changement de scene apres 2 secondes
                 Invoke("NivReussis", 2f);
             }
